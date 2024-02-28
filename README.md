@@ -7,11 +7,5 @@ poolobject
 
 
 Autores:
-
-[author]
-@author
-[![author]
-[![@author]
-[@author]
 Elena Recio Pérez
 Álvaro Vázquez Suárez
