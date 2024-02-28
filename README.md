@@ -1,15 +1,17 @@
 poolobject
 ==========
+[![codecov](https://codecov.io/gh/lsl1005/poolobject/branch/master/graph/badge.svg?token=97NWKQFP2T)](https://codecov.io/gh/lsl1005/poolobject)
 
-[![Java CI](https://github.com/clopezno/poolobject/actions/workflows/ci_jdk11_build.yml/badge.svg)](https://github.com/clopezno/poolobject/actions/workflows/ci_jdk11_build.yml) 
-[![Java CI](https://github.com/clopezno/poolobject/actions/workflows/ci_jdk1.8_build_test.yml/badge.svg)](https://github.com/clopezno/poolobject/actions/workflows/ci_jdk1.8_build_test.yml) 
-[![codecov](https://codecov.io/gh/clopezno/poolobject/graph/badge.svg?token=NvQ17D5kct)](https://codecov.io/gh/clopezno/poolobject)
+[![Java CI](https://github.com/Kencho/poolobject/actions/workflows/ci.yml/badge.svg)](https://github.com/Kencho/poolobject/actions/workflows/ci.yml) [![Build Status](https://app.travis-ci.com/Kencho/poolobject.svg?branch=master)](https://app.travis-ci.com/Kencho/poolobject) [![codecov](https://codecov.io/gh/Kencho/poolobject/branch/master/graph/badge.svg)](https://codecov.io/gh/Kencho/poolobject)
+[![Java CI](https://github.com/lsl1005/poolobject/actions/workflows/ci.yml/badge.svg)](https://github.com/lsl1005/poolobject/actions/workflows/ci.yml)
 
-Java code example of creational design pattern pool object
 
-Workshop to use good practices in software development: testing, ci and measurement.
+Autores:
 
-Authors:
-
-- Carlos Lopez Nozal
-- Jesus Alonso Abad
+[author]
+@author
+[![author]
+[![@author]
+[@author]
+Elena Recio Pérez
+Álvaro Vázquez Suárez
