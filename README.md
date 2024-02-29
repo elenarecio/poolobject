@@ -32,8 +32,8 @@ CI) de vuestro fichero README.md en el repositorio.
 que describir el caso de prueba añadido.
 6. Verificar el resultado de las pruebas en el workflow de integración continua y cómo la calidad del
 producto va mejorando con las sucesivas integraciones
-Preguntas: (justificándolas con indicadores obtenidos a través de herramientas propuestas)
 
+## Preguntas:
 ¿Se ha realizado trabajo en equipo?
 
 Sí, pero todos los commits salen a nombre de elena Recio ya que en el momento en el que lo realizamos a trvés de videollamada WhatsApp, Álvaro Suárez no disponia de ordenador para poder realizar la practica.
