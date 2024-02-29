@@ -39,7 +39,9 @@ producto va mejorando con las sucesivas integraciones
 Sí, pero todos los commits salen a nombre de elena Recio ya que en el momento en el que lo realizamos a trvés de videollamada WhatsApp, Álvaro Suárez no disponia de ordenador para poder realizar la practica.
 
 ¿Tiene calidad el conjunto de pruebas disponibles?
+
 Sí
 
 ¿Cuál es el esfuerzo invertido en realizar la actividad?
+
 Unas 3-4 horas
