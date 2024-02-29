@@ -1,3 +1,6 @@
+<project  name="PoolObjectPattern" default="dist" basedir=".">
+ <description>
+   Practica 1 de desarrollo avanzado de sistemas software 
 <project  name="PoolObjectPattern" default="dist" basedir="." xmlns:jacoco="antlib:org.jacoco.ant">
   <description>
     Practica 1 de desarrollo avanzado de sistemas software 
@@ -15,6 +18,7 @@
     <pathelement location="${main.build.dir}"/>
   </path>
 
+
   <taskdef uri="antlib:org.jacoco.ant" resource="org/jacoco/ant/antlib.xml">
     <classpath path="lib/jacocoant.jar"/>
   </taskdef>
@@ -23,31 +27,42 @@
     <!-- Create the time stamp -->
     <tstamp/>
     <!-- Create the build directory structure used by compile -->
+     <mkdir dir="${main.build.dir}"/>
+	 <mkdir dir="${test.build.dir}"/>
     <mkdir dir="${main.build.dir}"/>
     <mkdir dir="${test.build.dir}"/>
   </target>
 
+  <target name="compile"  depends="init">
+
+    <javac srcdir="${main.src.dir}" destdir="${main.build.dir}" includeantruntime="false"/>
   <target name="compile" depends="init">
     <javac srcdir="${main.src.dir}" destdir="${main.build.dir}" includeantruntime="false" debug="true"/>
   </target>
 
   <target name="test-compile" depends="compile">
+
+    <javac srcdir="${test.src.dir}" destdir="${test.build.dir}" includeantruntime="false">
+        <classpath refid="classpath.test"/>
     <javac srcdir="${test.src.dir}" destdir="${test.build.dir}" includeantruntime="false" debug="true">
       <classpath refid="classpath.test"/>
     </javac>
   </target>
 
   <target name="test" depends="test-compile">
+    <junit printsummary="on" haltonfailure="yes" fork="true">
     <jacoco:coverage>
-      <junit printsummary="on" haltonfailure="yes" fork="true">
+      <junit printsummary="on" haltonfailure="no" fork="true">
         <classpath>
           <path refid="classpath.test"/>
           <pathelement location="${test.build.dir}"/>
         </classpath>
         <formatter type="brief" usefile="false" />
         <batchtest>
+            <fileset dir="${test.src.dir}" includes="**/*Test.java" />
           <fileset dir="${test.src.dir}" includes="**/*Test.java" />
         </batchtest>
+    </junit>
       </junit>
     </jacoco:coverage>
     <jacoco:report>
@@ -65,12 +80,10 @@
         </sourcefiles>
       </structure>
       <html destdir="report"/>
-      <xml destfile="report.xml"/>
-	  <report>
-		<param name="author" value="true"/>
-	  </report>
     </jacoco:report>
   </target>
+  <target name="dist" depends="compile"
+        description="generate the distribution">
   <target name="dist" depends="compile" description="generate the distribution">
     <!-- Create the distribution directory -->
     <mkdir dir="${dist}/lib"/>
@@ -78,9 +91,12 @@
     <jar jarfile="${dist}/lib/PoolObject-${DSTAMP}.jar" basedir="${main.build.dir}"/>
   </target>
 
+  <target name="clean"
+        description="clean up">
   <target name="clean" description="clean up">
     <!-- Delete the ${build} and ${dist} directory trees -->
     <delete dir="${main.build.dir}"/>
+	<delete dir="${test.build.dir}"/>
     <delete dir="${test.build.dir}"/>
     <delete dir="${dist}"/>
     <delete dir="report"/>
